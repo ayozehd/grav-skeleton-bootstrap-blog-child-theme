@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    grav:
+        build:
+            context: .
+        restart: always
+        volumes:
+            - ./pages:/var/www/html/user/pages
+            - ./config:/var/www/html/user/config
+            # - ./themes/custom:/var/www/html/user/themes/custom
+        ports:
+            - "8080:8080"
